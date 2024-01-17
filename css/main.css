@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: hsl(217, 54%, 11%);
+	font-family: 'Outfit', sans-serif;
+	font-size: 18px;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card-box {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 350px;
+	height: 600px;
+	/* text-align: center; */
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.card-img-top {
+	width: 300px;
+	border-radius: 5px;
+	background-color: aquamarine;
+}
+
+.card-body { 
+    max-width: 300px;
+}
+
+.card-body > div{ 
+    padding: 15px 0;
+}
+
+.card-title {
+	background-color: royalblue;
+}
+
+.card-info {
+	background-color: green;
+}
+
+.count {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: lime;
+}
+
+.creator {
+	display: flex;
+	flex-direction: row;
+	background-color: tomato;
+    border-top: 1px solid yellow;
+}
+
+.image-avatar {
+	width: 30px;
+	border-radius: 50%;
+	border: 1.5px solid #b3b3b3;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
