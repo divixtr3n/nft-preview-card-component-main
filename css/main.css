@@ -8,10 +8,7 @@ body {
 	background-color: hsl(217, 54%, 11%);
 	font-family: 'Outfit', sans-serif;
 	font-size: 18px;
-}
-
-.container {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -26,59 +23,154 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	width: 350px;
-	height: 600px;
-	/* text-align: center; */
 	border-radius: 10px;
-	background-color: #fff;
+	background-color: hsl(216, 50%, 16%);
+}
+
+.nft-img {
+	position: relative;
+	height: 300px;
 }
 
 .card-img-top {
 	width: 300px;
 	border-radius: 5px;
-	background-color: aquamarine;
 }
 
-.card-body { 
-    max-width: 300px;
+.nft-shadow:hover {
+	opacity: 1;
 }
 
-.card-body > div{ 
-    padding: 15px 0;
+.nft-shadow {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	background-color: hsla(178, 100%, 50%, 0.507);
+	border-radius: 5px;
+	z-index: 1;
+	background-image: url(../images/icon-view.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.card-body {
+	max-width: 300px;
+}
+
+.card-body > div {
+	padding: 20px 0;
 }
 
 .card-title {
-	background-color: royalblue;
+	color: hsl(0, 0%, 100%);
+	font-weight: bold;
+}
+
+.card-title h3 {
+	transition: color 0.3s;
+}
+
+.card-title h3:hover {
+	color: hsl(178, 100%, 50%);
+	cursor: pointer;
 }
 
 .card-info {
-	background-color: green;
+	color: hsl(215, 51%, 70%);
+	font-size: 18px;
+	font-weight: lighter;
 }
 
-.count {
+.numbers {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	background-color: lime;
+}
+
+.numbers .crypto-container .eth-count {
+	color: hsl(178, 100%, 50%);
+}
+
+.numbers .clock-container .time-count {
+	color: hsl(215, 51%, 70%);
+}
+
+.clock-container,
+.crypto-container {
+	display: flex;
+	align-items: center;
+}
+
+.crypto-icon,
+.clock-icon {
+	display: flex;
+}
+
+.icon-number {
+	height: 18px;
+	padding-right: 5px;
+	align-self: baseline;
 }
 
 .creator {
 	display: flex;
 	flex-direction: row;
-	background-color: tomato;
-    border-top: 1px solid yellow;
+	align-items: center;
+	color: hsl(215, 51%, 70%);
+	border-top: 1.5px solid hsl(215, 32%, 27%);
+	font-size: 15px;
+}
+
+.creator p a {
+	text-decoration: none;
+	color: hsl(0, 0%, 100%);
+	transition: color 0.3s;
+}
+
+.creator p a:hover {
+	color: hsl(178, 100%, 50%);
 }
 
 .image-avatar {
-	width: 30px;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 35px;
 	border-radius: 50%;
-	border: 1.5px solid #b3b3b3;
+	border: 1.5px solid hsl(215, 51%, 70%);
 }
 
 .attribution {
 	font-size: 11px;
 	text-align: center;
+	color: hsl(0, 0%, 100%);
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.attribution a:hover {
+	color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 375px) {
+	.container {
+		scale: 80%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		scale: 110%;
+	}
 }
